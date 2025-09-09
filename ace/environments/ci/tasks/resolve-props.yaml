@@ -27,6 +27,7 @@ spec:
     - name: is-service-endpoint-type
     - name: is-version
     - name: is-base-image
+    - name: release-name
   steps:
     - name: parse-source-properties
       image: mikefarah/yq:4.7.1
