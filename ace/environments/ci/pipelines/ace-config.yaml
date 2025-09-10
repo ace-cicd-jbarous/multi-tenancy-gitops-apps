@@ -49,6 +49,7 @@ spec:
         - name: deleteExisting
           value: "true"
       taskRef:
+        apiVersion: tekton.dev/v1
         kind: ClusterTask
         name: git-clone
       workspaces:
@@ -66,6 +67,7 @@ spec:
         - name: deleteExisting
           value: "true"
       taskRef:
+        apiVersion: tekton.dev/v1
         kind: ClusterTask
         name: git-clone
       workspaces:
@@ -83,6 +85,7 @@ spec:
         - name: deleteExisting
           value: "true"
       taskRef:
+        apiVersion: tekton.dev/v1
         kind: ClusterTask
         name: git-clone
       workspaces:
@@ -98,6 +101,7 @@ spec:
       runAfter:
         - clone-is-config-repo
       taskRef:
+        apiVersion: tekton.dev/v1
         kind: Task
         name: resolve-props
       workspaces:
@@ -139,6 +143,7 @@ spec:
         - clone-is-infra-repo
         - clone-gitops-repo
       taskRef:
+        apiVersion: tekton.dev/v1
         kind: Task
         name: create-config
       workspaces:
@@ -148,6 +153,7 @@ spec:
           workspace: gitops-repo-secret
     - name: create-pull-request
       taskRef:
+        apiVersion: tekton.dev/v1
         kind: Task
         name: github-open-pr
       runAfter:
