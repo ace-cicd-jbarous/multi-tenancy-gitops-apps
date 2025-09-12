@@ -144,8 +144,8 @@ spec:
 
         done
 
-        echo created configurations: ${configurations## } 
-        echo -n ${configurations## } > $(results.configurations.path)
+        echo created configurations: ${configurations} 
+        echo -n ${configurations} > $(results.configurations.path)
       workingDir: $(workspaces.workspace.path)
     - name: update-kustomization
       env:
