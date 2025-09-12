@@ -6,18 +6,22 @@ spec:
   params:
     - name: is-config-repo-url
       type: string
+      default: "git@github.com:ace-cicd-jbarous/ace-config.git"
       description: "SSH url of Configuration repository, ex: git@github.com:ace-prod-ref/ace-config.git"
 
     - name: is-infra-repo-url
       type: string
+      default: "git@github.com:ace-cicd-jbarous/ace-infra.git"
       description: "SSH url of Infrastructure repository, ex: git@github.com:ace-prod-ref/ace-infra.git"
 
     - name: git-ops-repo-url
       type: string
+      default: "git@github.com:ace-cicd-jbarous/multi-tenancy-gitops-apps.git"
       description: "SSH url of GitOps repository, ex: git@github.com:ace-prod-ref/multi-tenancy-gitops-apps.git"
 
     - name: gitops-apps-repo-full-name
       type: string
+      default: "ace-cicd-jbarous/multi-tenancy-gitops-apps"
       description: "Repo name of GitOps repository, in github.com, ex: ace-prod-ref/multi-tenancy-gitops-apps"
 
     - name: github-pr-title
@@ -30,7 +34,7 @@ spec:
       description: "Body of pull request"
     - name: github-pr-token-secret-name
       type: string
-      default: cicd-acme
+      default: jbarous-token
       description: "Personal access token for CICD bot user"
 
   workspaces:
